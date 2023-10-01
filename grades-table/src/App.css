@@ -1,0 +1,7 @@
+.search-bar{
+  display: flex
+}
+
+.search-bar-item{
+ padding: 10px;
+}
