@@ -126,9 +126,9 @@ function App() {
   }
   QPICalculator();
   return (
-    <div class="bg-slate-800 text-white flex justify-center">
-      <div className="flex flex-col p-5 bg-green-800">
-        <div className="flex justify-center">Add Course</div>
+    <div class="bg-slate-800 text-white flex justify-center space-x-4">
+      <div className="flex flex-col p-5 bg-gray-700 rounded-lg drop-shadow-lg">
+        <div className="flex justify-center font-bold">Add Course</div>
         <div className="flex flex-col">
           <label>Course No.: </label>
           <input className="text-black" type="text" value={cNum} onChange={handleCNumChange} />
@@ -212,12 +212,12 @@ function App() {
           />
           <div>F</div>
         </div>
-        <button onClick={handleAddDataClick}>Submit</button>
+        <button className="bg-green-500 rounded-lg drop-shadow-lg  hover:bg-green-600" onClick={handleAddDataClick}>Submit</button>
       </div>
 
-      <div className="bg-blue-800 flex flex-col p-5">
-      <div className="flex justify-center">Grades Table</div>
-        <div class="search-bar">
+      <div className="bg-gray-700 flex flex-col p-5 rounded-lg w-2/3 drop-shadow-lg">
+      <div className="flex justify-center font-bold">Grades Table</div>
+        <div class="space-x-4">
           <label class="search-bar-item">Search for: </label>
           <input
             className="text-black"
@@ -232,9 +232,9 @@ function App() {
           </button>
         </div>
 
-        <div class="main-table">
+        <div >
           <div>
-            <table>
+            <table className="table-fixed w-full px-2">
               <thead>
                 <tr>
                   <th>Course No.</th>
@@ -256,9 +256,10 @@ function App() {
                 })}
               </tbody>
             </table>
-            <div className="flex justify-end">Total QPI: {totalQPI} </div>
+            
           </div>
-          <div></div>
+          <div className="flex justify-end">Total QPI: {totalQPI} </div>
+          
         </div>
       </div>
     </div>
